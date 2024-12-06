@@ -1,7 +1,7 @@
 
-NAME = weapon
+NAME = harlFilter
 
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp Harl.cpp
 
 CC = c++
 

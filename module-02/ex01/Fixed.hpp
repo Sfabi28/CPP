@@ -14,10 +14,10 @@ class Fixed
     
     public:
         Fixed();
-        Fixed(const Fixed &Fixed);
+        Fixed(const Fixed &fixed);
         Fixed(const int value);
         Fixed(const float value);
-        Fixed &operator = (const Fixed &Fixed);
+        Fixed &operator = (const Fixed &fixed);
         ~Fixed();
 
         int     getRawBits(void) const;

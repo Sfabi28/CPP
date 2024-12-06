@@ -5,7 +5,7 @@ Fixed::Fixed() : fixedPointValue(0)
     std::cout << "Default constractor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &Fixed) : fixedPointValue(Fixed.getRawBits())
+Fixed::Fixed(const Fixed &fixed) : fixedPointValue(fixed.getRawBits())
 {
     std::cout << "Copy constractor called" << std::endl;
 }
@@ -22,11 +22,11 @@ Fixed::Fixed(const float value)
     fixedPointValue = roundf(value * (1 << fractionalBits));
 }
 
-Fixed &Fixed::operator = (const Fixed &Fixed)
+Fixed &Fixed::operator = (const Fixed &fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &Fixed)
-        this->fixedPointValue = Fixed.getRawBits();
+    if (this != &fixed)
+        this->fixedPointValue = fixed.getRawBits();
     return *this;
 }
 
@@ -35,9 +35,9 @@ Fixed::~Fixed()
     std::cout << "Destructor called" << std::endl;
 }
 
-std::ostream &operator <<  (std::ostream &ins, const Fixed &Fixed)
+std::ostream &operator <<  (std::ostream &ins, const Fixed &fixed)
 {
-    ins << Fixed.toFloat();
+    ins << fixed.toFloat();
     return ins;
 }
 

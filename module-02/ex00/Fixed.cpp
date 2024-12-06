@@ -2,19 +2,19 @@
 
 Fixed::Fixed() : fixedPointValue(0)
 {
-    std::cout << "Default constractor called" << std::endl;
+    std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &Fixed) : fixedPointValue(Fixed.getRawBits())
+Fixed::Fixed(const Fixed &fixed) : fixedPointValue(fixed.getRawBits())
 {
-    std::cout << "Copy constractor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
 }
 
-Fixed &Fixed::operator = (const Fixed &Fixed)
+Fixed &Fixed::operator = (const Fixed &fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &Fixed)
-        this->fixedPointValue = Fixed.getRawBits();
+    if (this != &fixed)
+        this->fixedPointValue = fixed.getRawBits();
     return *this;
 }
 

@@ -1,7 +1,7 @@
 
-NAME = weapon
+NAME = a.out
 
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CC = c++
 

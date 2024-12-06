@@ -13,8 +13,8 @@ class Fixed
     
     public:
         Fixed();
-        Fixed(const Fixed &Fixed);
-        Fixed &operator = (const Fixed &Fixed);
+        Fixed(const Fixed &fixed);
+        Fixed &operator = (const Fixed &fixed);
         ~Fixed();
         int getRawBits(void) const;
         void setRawBits(int const raw);
