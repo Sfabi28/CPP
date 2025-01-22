@@ -14,16 +14,25 @@ class MutantStack : public std::stack<T>
         {
             std::stack<T>();
         }
-        MutantStack(const MutantStack &copy) : std::stack<T>(copy.std::stack<T>){}
+        MutantStack(const MutantStack &copy) : std::stack<T>(copy){}
         MutantStack &operator = (const MutantStack &copy)
         {
-            
+            if (this != &copy)
+                std::stack<T>::operator=(copy);
+            return (*this);
         }
-        ~MutantStack();
+        ~MutantStack() {};
 
-        typedef class std::stack <T>::container_type::iterator it = stack.top();
-        typedef class std::stack <T>::container_type::iterator ite;
+        typedef class std::stack <T>::container_type::iterator iterator;
 
+        iterator begin()
+        {
+            return (std::stack<T>::c.begin());
+        }
+        iterator end()
+        {
+            return (std::stack<T>::c.end());
+        }
 };
 
 #endif
